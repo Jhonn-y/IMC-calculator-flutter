@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:imc_calculator/blocPattern/imc_blocPattern.dart';
 import 'package:imc_calculator/changeNotifier/imc_changeNotifier.dart';
 import 'package:imc_calculator/setState/imc_setState.dart';
 import 'package:imc_calculator/valueNotifier/imc_valueNotifier.dart';
@@ -43,6 +44,8 @@ class Home extends StatelessWidget {
             }, child: Text("Valuenotifier")),
             ElevatedButton(onPressed: (){
 
+            _goToPage(context, ImcBlocPattern());
+            
             }, child: Text("Bloc Pattern")),
 
           ],
