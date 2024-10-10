@@ -1,8 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:imc_calculator/changeNotifier/imc_changeNotifier.dart';
 import 'package:imc_calculator/setState/imc_setState.dart';
-import 'package:imc_calculator/valueNotifier/valueNotifier.dart';
+import 'package:imc_calculator/valueNotifier/imc_valueNotifier.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
@@ -31,15 +32,16 @@ class Home extends StatelessWidget {
 
             }, child: Text("setState")),
             ElevatedButton(onPressed: (){
-
+            
+            _goToPage(context, ImcChangenotifier());
 
             }, child: Text("changeNotifier")),
             ElevatedButton(onPressed: (){
 
+            _goToPage(context, IMCvalueNotifier());
 
             }, child: Text("Valuenotifier")),
             ElevatedButton(onPressed: (){
-            _goToPage(context, IMCvalueNotifier());
 
             }, child: Text("Bloc Pattern")),
 
